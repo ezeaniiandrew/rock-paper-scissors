@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  width: 600px;
+
+  @media screen and (max-width: 600px) {
+    & {
+      width: 100%;
+    }
+  }
+}
+
+.options_box {
+  width: 100%;
+  max-width: 64rem;
+  min-height: 28rem;
+  position: relative;
+  background-image: url("../../assets/images/bg-pentagon.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+
+  @media screen and (min-width: 768px) {
+    & {
+      background-size: 70%;
+      margin-top: 5rem;
+    }
+  }
+}
