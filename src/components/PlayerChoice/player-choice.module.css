@@ -1,0 +1,256 @@
+.outerCircle {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  border-radius: 50%;
+
+  @media screen and (min-width: 700px) {
+    & {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}
+.paper {
+  background-image: radial-gradient(var(--paper-gradient));
+}
+
+.rock {
+  background-image: radial-gradient(var(--rock-gradient));
+}
+
+.scissors {
+  background-image: radial-gradient(var(--scissors-gradient));
+}
+
+.spock {
+  background-image: radial-gradient(var(--cyan));
+}
+
+.lizard {
+  background-image: radial-gradient(var(--lizard-gradient));
+}
+
+.round {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 200;
+  height: 6.4rem;
+  width: 6.4rem;
+  max-width: 13rem;
+  max-height: 13rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+
+  @media screen and (min-width: 700px) {
+    & {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
+.left {
+  position: absolute;
+  left: 0;
+  top: 18%;
+
+  @media screen and (min-width: 700px) {
+    & {
+      left: 2rem;
+      top: -1rem;
+    }
+  }
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  top: 18%;
+
+  @media screen and (min-width: 700px) {
+    & {
+      right: 2rem;
+      top: -1rem;
+    }
+  }
+}
+
+.bottom {
+  position: absolute;
+  bottom: 19%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media screen and (min-width: 700px) {
+    & {
+      bottom: 0;
+    }
+  }
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+  position: absolute;
+
+  @media screen and (max-width: 600px) {
+    width: 5.5rem;
+    height: 5.5rem;
+
+    & .round {
+      width: 4.5rem;
+      height: 4.5rem;
+      padding: 0 0.4rem;
+    }
+  }
+}
+
+.one {
+  top: 20%;
+  left: 36%;
+
+  @media screen and (min-width: 700px) {
+    top: -2.3rem;
+  }
+}
+
+.two {
+  right: 0;
+  top: 35%;
+
+  @media screen and (min-width: 700px) {
+    top: 20%;
+    right: 1.5rem;
+  }
+}
+
+.three {
+  bottom: 20%;
+  right: 2rem;
+
+  @media screen and (min-width: 700px) {
+    right: 4rem;
+    bottom: -2.3rem;
+  }
+}
+
+.four {
+  bottom: 20%;
+  left: 2rem;
+
+  @media screen and (min-width: 700px) {
+    bottom: -2.3rem;
+    left: 4rem;
+  }
+}
+
+.five {
+  top: 35%;
+  left: 0;
+
+  @media screen and (min-width: 700px) {
+    top: 20%;
+    left: 1.5rem;
+  }
+}
+
+.outerCircleNone {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  border-radius: 50%;
+  top: -1.8rem;
+
+  @media screen and (min-width: 700px) {
+    & {
+      top: 28px;
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}
+
+.none {
+  position: absolute;
+  top: 0.75rem;
+  left: 10%;
+  z-index: 200;
+  height: 6.4rem;
+  width: 6.4rem;
+  max-width: 13rem;
+  max-height: 13rem;
+  border-radius: 50%;
+  background-color: var(--dark-text);
+  display: grid;
+  place-items: center;
+
+  @media screen and (min-width: 700px) {
+    & {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
+
+.animated__circle {
+  stroke-dasharray: 0 565.48;
+  animation: fillCircle 2s linear forwards;
+}
+
+@keyframes fillCircle {
+  100% {
+    stroke-dasharray: 565.48 0;
+  }
+}
+
+.winner__circle {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  opacity: 0;
+  animation: showWinnerCircle 0.5s linear 0.6s forwards;
+
+  @media screen and (min-width: 720px) {
+    width: 16rem;
+    height: 16rem;
+    top: -30%;
+    left: -30%;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  &::before {
+    width: 90%;
+    height: 90%;
+  }
+
+  &::after {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@keyframes showWinnerCircle {
+  to {
+    opacity: 1;
+  }
+}
