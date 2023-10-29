@@ -1,0 +1,51 @@
+.game__room {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin-top: 37px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+
+  @media screen and (min-width: 700px) {
+    & {
+      width: 600px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.grid__2 {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+
+  @media screen and (min-width: 700px) {
+    & {
+      grid-row: initial;
+      grid-column: initial;
+    }
+  }
+}
+
+.md {
+  margin-bottom: 20px;
+}
+
+.player__grid {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  & p {
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
