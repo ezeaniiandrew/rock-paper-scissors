@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--header-outline);
+  padding: 20px;
+  gap: 50px;
+  border-radius: 5px;
+}
+
+.title {
+  width: 50%;
+  display: grid;
+  place-items: center;
+
+  & h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 0.7;
+    color: var(--white);
+  }
+}
+
+.score {
+  background-color: var(--white);
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 5px;
+
+  & span {
+    text-transform: uppercase;
+    color: var(--score-text);
+  }
+
+  & p {
+    font-weight: var(--fw-700);
+    font-size: 2rem;
+    color: var(--dark-text);
+  }
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.75;
+  color: var(--white);
+  width: min-content;
+  display: grid;
+  place-items: center;
+}
