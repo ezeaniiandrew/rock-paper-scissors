@@ -1,7 +1,15 @@
+import ChoosePlayingOption from "./components/ChoosePlayingOption/ChoosePlayingOptions";
+import ScoreBoard from "./components/ScoreBoard/ScoreBoard";
+import GameRoom from "./components/GameRoom/GameRoom.jsx";
+import { useGame } from "./context";
+
 function App() {
+  const { currentScreen } = useGame();
+
   return (
     <>
-      <p>Rock Paper Scissors</p>
+      <ScoreBoard />
+      {currentScreen === "gamePlay" ? <GameRoom /> : <ChoosePlayingOption />}
     </>
   );
 }
