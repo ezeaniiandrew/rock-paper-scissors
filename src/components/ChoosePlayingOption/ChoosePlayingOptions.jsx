@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import { useGame } from "../../context";
 import { actionTypes } from "../../reducers/gameReducer";
-import BonusGame from "../BonusGame.jsx/BonusGame";
+import BonusGame from "../BonusGame/BonusGame";
 import ClassicGame from "../ClassicGame/ClassicGame";
 import Modal from "../Modal/Modal";
 import styles from "./choose-playing-option.module.css";
